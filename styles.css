@@ -1,0 +1,126 @@
+body {
+  background-color: #1d1d1d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: 'Azeret Mono', monospace;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.align-container{
+  height: max-content;
+  width: max-content;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  justify-content: center;
+  align-items: center;
+}
+
+.spinner {
+  width: 75vw;
+  height: 75vw;
+  max-width: 500px;
+  max-height: 500px;
+  animation: spinning82341 5s linear infinite;
+  text-align: center;
+  border-radius: 50%;
+  filter: blur(1px);
+  box-shadow:
+    0px 4px 2px 0px rgb(21, 255, 0),
+    0px 0 0px 0px rgba(38, 41, 38, 0);
+  position: absolute;
+  top: 0;
+  z-index: -1;
+
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 3s ease-in-out;
+}
+
+.spinner.running {
+  opacity: 1;
+  visibility: visible;
+}
+
+@keyframes spinning82341 {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 75vw;
+  height: 75vw;
+  max-width: 500px;
+  max-height: 500px;
+  border-radius: 50%;
+  background-color: #3d3d3d03;
+}
+
+.container .container-content .cronometer-content{
+  display: flex;
+  flex-direction: row;
+}
+
+.container .container-content .cronometer-content div{
+  margin: 0;
+  color: #979797;
+  font-size: 65px;
+  letter-spacing: -3px;
+  @media screen and (max-width: 675px) {
+    font-size: 10vw;
+  } 
+}
+
+.container-buttons{
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  justify-content: center;
+}
+
+.container-buttons button{
+  height: 70px;
+  width: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  border-radius: 50%;
+  margin: 0;
+  padding: 0;
+  background-color: #3d3d3d;
+  color: #1d1d1d;
+  border: none;
+  transition: 0.5s all;
+  &:hover{
+    cursor: pointer;
+    color: #ff4800;
+    background-color: #252525;
+    border: 3px solid #ff48004f;
+  }
+  @media screen and (max-width: 675px) {
+    height: 12vw;
+    width: 12vw;
+    font-size: 5vw;
+  } 
+}
+
+.active{
+    transition: 0.5s all;
+    color: #2afd00!important;
+    background-color: #252525!important;
+    border: 3px solid #1dac004f!important;
+}
+
+.container-buttons .stop-timer-button{
+  display: none;
+}
