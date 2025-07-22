@@ -55,6 +55,8 @@ O projeto foi desenvolvido com foco em responsividade, adaptando-se automaticame
 
 <img width="1840" height="859" alt="Captura de tela 2025-07-21 195222" src="https://github.com/user-attachments/assets/2349dc46-3da2-4cf4-93a3-a1cc81d018fd" />
 
+## 🖼️ Visualize o projeto no link abaixo 
+https://gabste8831.github.io/stopwatch-project/
 
 ## ✨ Inspiração
 
